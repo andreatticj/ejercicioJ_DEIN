@@ -3,6 +3,7 @@ package eu.andreatt.ejercicioj_dein.application;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -32,8 +33,9 @@ public class HelloApplication extends Application {
         Scene scene = new Scene(fxmlLoader.load());
 
         // Configurar el título de la ventana
-        stage.setTitle("Hello!");
-
+        stage.setTitle("MINI COOPER");
+        Image icon = new Image(getClass().getResourceAsStream("/eu/andreatt/ejercicioj_dein/images/Cooper.png")); // Cambia "tu_icono.png" por el nombre de tu imagen
+        stage.getIcons().add(icon);
         // Asignar la escena al escenario y mostrar la ventana
         stage.setScene(scene);
         stage.show();
